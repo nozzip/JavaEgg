@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejC02">
+  <ClassDiagramComponents>
+    <Class name="EjC02Main" package="ejC02" visibility="public" xPosition="8.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Asiento" package="ejC02.entidades" visibility="public" xPosition="8.0" yPosition="149.0">
+      <Fields>
+        <Field name="ubicacion" type="String" visibility="private"/>
+        <Field name="e" type="Espectador" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="ubicacion"/>
+          <Argument type="Espectador" name="e"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUbicacion" returnType="String" visibility="public"/>
+        <Method name="getE" returnType="Espectador" visibility="public"/>
+        <Method name="setUbicacion" returnType="void" visibility="public">
+          <Argument type="String" name="ubicacion"/>
+        </Method>
+        <Method name="setE" returnType="void" visibility="public">
+          <Argument type="Espectador" name="e"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cine" package="ejC02.entidades" visibility="public" xPosition="295.0" yPosition="303.0">
+      <Fields>
+        <Field name="sala" type="Asiento" visibility="private"/>
+        <Field name="asientosLibres" type="List&lt;String&gt;" visibility="private"/>
+        <Field name="pelicula" type="Pelicula" visibility="private"/>
+        <Field name="precio" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Asiento[][]" name="sala"/>
+          <Argument type="List&lt;String&gt;" name="asientosLibres"/>
+          <Argument type="Pelicula" name="pelicula"/>
+          <Argument type="Integer" name="precio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSala" returnType="Asiento[][]" visibility="public"/>
+        <Method name="getAsientosLibres" returnType="List&lt;String&gt;" visibility="public"/>
+        <Method name="getPelicula" returnType="Pelicula" visibility="public"/>
+        <Method name="getPrecio" returnType="Integer" visibility="public"/>
+        <Method name="setSala" returnType="void" visibility="public">
+          <Argument type="Asiento[][]" name="sala"/>
+        </Method>
+        <Method name="setAsientosLibres" returnType="void" visibility="public">
+          <Argument type="List&lt;String&gt;" name="asientosLibres"/>
+        </Method>
+        <Method name="setPelicula" returnType="void" visibility="public">
+          <Argument type="Pelicula" name="pelicula"/>
+        </Method>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="Integer" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Espectador" package="ejC02.entidades" visibility="public" xPosition="396.0" yPosition="9.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="edad" type="Integer" visibility="private"/>
+        <Field name="dinero" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="Integer" name="edad"/>
+          <Argument type="Integer" name="dinero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getEdad" returnType="Integer" visibility="public"/>
+        <Method name="getDinero" returnType="Integer" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="Integer" name="edad"/>
+        </Method>
+        <Method name="setDinero" returnType="void" visibility="public">
+          <Argument type="Integer" name="dinero"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pelicula" package="ejC02.entidades" visibility="public" xPosition="812.0" yPosition="68.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="duracionEnMinutos" type="Integer" visibility="private"/>
+        <Field name="edadMinima" type="Integer" visibility="private"/>
+        <Field name="Director" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="Integer" name="duracionEnMinutos"/>
+          <Argument type="Integer" name="edadMinima"/>
+          <Argument type="String" name="Director"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="getDuracionEnMinutos" returnType="Integer" visibility="public"/>
+        <Method name="getEdadMinima" returnType="Integer" visibility="public"/>
+        <Method name="getDirector" returnType="String" visibility="public"/>
+        <Method name="setTitulo" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="setDuracionEnMinutos" returnType="void" visibility="public">
+          <Argument type="Integer" name="duracionEnMinutos"/>
+        </Method>
+        <Method name="setEdadMinima" returnType="void" visibility="public">
+          <Argument type="Integer" name="edadMinima"/>
+        </Method>
+        <Method name="setDirector" returnType="void" visibility="public">
+          <Argument type="String" name="Director"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CineServicio" package="ejC02.servicios" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="abrirCine" returnType="Cine" visibility="public"/>
+        <Method name="modificarCine" returnType="Cine" visibility="public">
+          <Argument type="Cine" name="c"/>
+        </Method>
+        <Method name="crearPosiblesEspectadores" returnType="ArrayList&lt;Espectador&gt;" visibility="public"/>
+        <Method name="recibirPosiblesEspectadores" returnType="Cine" visibility="public">
+          <Argument type="Cine" name="c"/>
+          <Argument type="ArrayList&lt;Espectador&gt;" name="interesados"/>
+        </Method>
+        <Method name="verSala" returnType="void" visibility="public">
+          <Argument type="Cine" name="c"/>
+        </Method>
+        <Method name="revisarEspectadores" returnType="void" visibility="public">
+          <Argument type="Cine" name="c"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="Columna" package="ejC02.enums" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Literals>
+        <Literal name="A"/>
+        <Literal name="B"/>
+        <Literal name="C"/>
+        <Literal name="D"/>
+        <Literal name="E"/>
+        <Literal name="F"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="sala" source="ejC02.entidades.Cine" target="ejC02.entidades.Asiento" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejC02.servicios.CineServicio" target="ejC02.entidades.Espectador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejC02.entidades.Cine" target="ejC02.entidades.Asiento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejC02.entidades.Asiento" target="ejC02.entidades.Espectador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejC02.entidades.Cine" target="ejC02.entidades.Pelicula" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="e" source="ejC02.entidades.Asiento" target="ejC02.entidades.Espectador" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejC02.servicios.CineServicio" target="ejC02.entidades.Cine" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pelicula" source="ejC02.entidades.Cine" target="ejC02.entidades.Pelicula" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
